@@ -108,6 +108,11 @@ def test_divide_frac_exercise_4():
         < eps
 
 
+def test_divide_zerodiverr_exercise_5():
+    with pytest.raises(ZeroDivisionError):
+        calculator.divide(5, 0)
+
+
 def test_binomial_zero_exercise_4():
     n, k = 10, 0
     assert abs(calculator.binomial(n, k) - 1) \
