@@ -1,5 +1,6 @@
 import calculator
 import math
+import pytest
 eps = 1e-12
 
 
@@ -20,6 +21,11 @@ def test_add_str_exercise_3():
     sentence = "Hello World"
     assert calculator.add(w1, w2) \
         == sentence
+
+
+def test_add_typerr_exercise_5():
+    with pytest.raises(TypeError):
+        calculator.add("hello", 5)
 
 
 def test_exponential_exercise_4():
